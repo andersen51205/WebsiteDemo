@@ -1,0 +1,25 @@
+body {
+	background: #4CA1AF;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #C4E0E5, #4CA1AF);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #C4E0E5, #4CA1AF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.nav-link {
+    font-size: 1.25rem;
+}
+
+.row {
+	background:#FFFFFF;
+}
+
+canvas{
+	display:block;
+}
+
+#Div_step {
+	height:540px;
+	overflow-x:hidden;
+	overflow-y:scroll;
+}
