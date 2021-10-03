@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- head -->
+    <meta charset="utf-8"><!-- encode -->
+    <link rel="stylesheet" type="text/css" href=".\css\lib\bootstrap.min.css"><!-- Bootstrap CSS -->
+    <script src=".\js\lib\all.min.js"></script><!-- Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet"><!-- Font -->
+    <link rel="stylesheet" type="text/css" href=".\css\default.css"><!-- Coustom CSS -->
+	<script src=".\js\lib\sweetalert2.all.min.js"></script><!-- SweetAlert2 -->
+    <!-- page title -->
+    <title>棋譜推演</title>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-secondary navbar-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" href="./index.html"><i class="fas fa-home"></i> 首頁</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fas fa-chess"></i> 象棋
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="./ChineseChessRecord.html">棋譜推演</a>
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- content -->
+	<div class="container">
+		<div class="row">
+			<div id="Div_canvas" class="col-8 p-0">
+				<canvas id="Canvas_chessboard" width="" height="" class="text-left"></canvas>
+			</div>
+			<div class="col-4 p-0">
+				<button id="Btn_import_record" type="button" class="btn btn-outline-primary mx-3 my-2 d-block">導入棋譜</button>
+				<button id="Btn_import_record" type="button" class="btn btn-outline-danger mx-3 my-2 d-inline">上一步</button>
+				<button id="Btn_import_record" type="button" class="btn btn-outline-danger mx-3 my-2 d-inline">下一步</button>
+				<div id="Div_step" class="mx-2" height="500">
+				<table class="w-100">
+					<tbody>
+						<tr>
+							<td>&ensp;1. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+							<td>&ensp;2. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+						</tr>
+						<tr>
+							<td>&ensp;3. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+							<td>&ensp;4. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+						</tr>
+						<tr>
+							<td>&ensp;5. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+							<td>&ensp;6. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+						</tr>
+						<tr>
+							<td>&ensp;7. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+							<td>&ensp;8. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+						</tr>
+						<tr>
+							<td>&ensp;9. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+							<td>10. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+						</tr>
+						<tr>
+							<td>11. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+							<td>12. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+						</tr>
+						<tr>
+							<td>13. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+							<td>14. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+						</tr>
+						<tr>
+							<td>15. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+							<td>16. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+						</tr>
+						<tr>
+							<td>17. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+							<td>18. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+						</tr>
+						<tr>
+							<td>19. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+							<td>20. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+						</tr>
+						<tr>
+							<td>&ensp;1. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+							<td>&ensp;2. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+						</tr>
+						<tr>
+							<td>&ensp;3. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+							<td>&ensp;4. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+						</tr>
+						<tr>
+							<td>&ensp;5. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+							<td>&ensp;6. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+						</tr>
+						<tr>
+							<td>&ensp;7. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+							<td>&ensp;8. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+						</tr>
+						<tr>
+							<td>&ensp;9. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+							<td>10. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+						</tr>
+						<tr>
+							<td>11. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+							<td>12. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+						</tr>
+						<tr>
+							<td>13. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+							<td>14. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+						</tr>
+						<tr>
+							<td>15. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+							<td>16. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+						</tr>
+						<tr>
+							<td>17. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+							<td>18. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+						</tr>
+						<tr>
+							<td>19. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+							<td>20. <span class="btn btn-outline-success mx-1">C2.5</span><span class="btn btn-outline-success mx-1">h2+3</span></td>
+						</tr>
+					</tbody>
+				</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <!-- Footer -->
+    <script type="text/javascript" src=".\js\lib\jquery-3.6.0.min.js"></script><!-- jQuery -->
+    <!-- Popper.js -->
+    <script type="text/javascript" src=".\js\lib\bootstrap.min.js"></script><!-- Bootstrap JS -->
+    <!-- Coustom JS -->
+	<script type="text/javascript" src=".\js\ChineseChessRecord.js"></script><!-- Bootstrap JS -->
+</body>
+</html>
