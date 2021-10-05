@@ -83,10 +83,10 @@ function resetGame(){
 	}
 	m_message.textContent = " ";
 	m_title.style.background = "rgb(59, 118, 173)";
-	m_btnReset.textContent = "New Game !" ;
+	m_btnReset.textContent = "Next Color !" ;
 }
 function modeChange(){
-	Mode = this.id.toUpperCase();
+	Mode = this.getAttribute('data-mode').toUpperCase();
 	if(Mode === "EASY" && gameMode === "HARD"){
 		gameMode = "EASY";
 		m_btnEasy.classList.add("selected");
