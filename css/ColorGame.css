@@ -1,0 +1,63 @@
+body {
+	margin: 0;
+	text-align: center;
+	background: black;
+	font-family: 'Rubik', sans-serif;
+}
+h1 {
+	margin : 0;
+	padding: 15px;
+	font-size: 2rem;
+	font-weight: bold;
+}
+button {
+	border: none;
+	background-color: transparent;
+	height: 100%;
+	color : rgb(59, 118, 173);
+	font-size: 30px;
+	transition: all 0.5s;
+	outline: none;
+}
+button:hover {
+	background-color: rgb(59, 118, 173);
+	color : #E6E6FA;
+
+}
+#Div_title {
+	background-color: rgb(59, 118, 173);
+	color: white;
+	margin: 0;
+}
+#Div_control_panel {
+	margin-top: 0px;
+	background-color: #E6E6FA ;
+	height: 50px;
+	font-size: 30px;
+}
+#Div_game_space {
+	width: 40%;
+	margin-left: 30%;
+	margin-right:  30%;
+	margin-top: 30px;
+}
+#colorDisplay {
+	font-size: 200%;
+}
+.square {
+	padding: 11.66%;
+	margin: 4%;
+	float: left;
+	background-color: pink;
+	border-radius: 20%;
+	transition: background 1s;
+}
+#Span_message {
+	color: black;
+	display: inline-block;
+	width: 200px;
+}
+.selected {
+	background-color:  rgb(59, 118, 173) ;
+	color:white;
+}

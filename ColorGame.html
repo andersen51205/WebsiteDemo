@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- encode -->
+	<!-- encode -->
     <meta charset="utf-8">
 	<!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href=".\css\lib\bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href=".\css\lib\bootstrap.min.css">
 	<!-- Font Awesome -->
-    <script src=".\js\lib\all.min.js"></script>
+	<script src=".\js\lib\all.min.js"></script>
 	<!-- SweetAlert2 -->
 	<script src=".\js\lib\sweetalert2.all.min.js"></script>
 	<!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
 	<!-- Coustom CSS -->
-    <link rel="stylesheet" type="text/css" href=".\css\default.css">
-    <!-- page title -->
-    <title>網站</title>
+	<link rel="stylesheet" type="text/css" href="./css/default.css">
+	<link rel="stylesheet" type="text/css" href="./css/ColorGame.css">
+	<!-- page title -->
+	<title>Color Game</title>
 </head>
 <body>
-    <!-- navbar -->
+	<!-- navbar -->
     <nav id="Nav_navbar" class="navbar navbar-expand-lg bg-secondary navbar-dark">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,25 +40,34 @@
             </div>
         </div>
     </nav>
-
-    <!-- content -->
-	<div class="container">
-        <div class="jumbotron p-4">
-				<div>
-					<h1 class="display-4">GitHub Pages</h1>
-					<img src="./src/github.svg" width="150" height="150">
-				</div>
-				<hr class="my-4">
-				<p>GitHub Pages是GitHub提供的一個網頁代管服務，於2008年推出。</p>
-				<p>可以用於存放靜態網頁，包括部落格、項目文檔甚至整本書。</p>
-				<p>一般GitHub Pages的網站使用github.io的子域名，但是使用者也可以使用第三方域名。</p>
-        </div>
+	
+	<div id="Div_title">
+		<h1>
+			The Great<br>
+			<span id="Span_color_display">RGB(255, 255, 255)</span><br>
+			Guessing Game
+		</h1>
+	</div>
+	<div id="Div_control_panel">
+		<button id="Btn_reset">Next Color !</button>
+    	<span id="Span_message"></span>
+    	<button id="Btn_easy">Easy</button>
+    	<button id="Btn_hard" class="selected">Hard</button>
+	</div>
+	<div id="Div_game_space">
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
 	</div>
 
-    <!-- Footer -->
+	<!-- Footer -->
     <script type="text/javascript" src=".\js\lib\jquery-3.6.0.min.js"></script><!-- jQuery -->
     <!-- Popper.js -->
     <script type="text/javascript" src=".\js\lib\bootstrap.min.js"></script><!-- Bootstrap JS -->
     <!-- Coustom JS -->
+	<script type="text/javascript" src="./js/ColorGame.js"></script>
 </body>
 </html>
